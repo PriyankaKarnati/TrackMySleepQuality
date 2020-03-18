@@ -46,7 +46,7 @@ class SleepQualityViewModel(private val sleepNightKey: Long = 0L,
         _navigateToSleepTrackerFragment.value = null
     }
 
-    private fun onClear() {
+    override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
     }

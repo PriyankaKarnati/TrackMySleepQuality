@@ -59,6 +59,7 @@ class SleepTrackerViewModel(
     val _showSnackBarEvent = MutableLiveData<Boolean>()
     val showSnackBarEvent: LiveData<Boolean>
         get() = _showSnackBarEvent
+    val nights = database.getAllNights()
     init {
         initTonight()
     }
